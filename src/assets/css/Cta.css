@@ -1,0 +1,23 @@
+.slider-container {
+    position: relative;
+    overflow: hidden;
+    height: 350px;
+    align-items: center;
+  }
+  
+  .slider-content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+    align-items: center;
+  }
+  
+  .slide-1 {
+    opacity: 1;
+  }
+  
+  /* Add similar styles for slide-2 if needed */
+  
