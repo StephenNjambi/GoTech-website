@@ -51,5 +51,11 @@
     "autoprefixer": "^10.4.16",
     "postcss": "^8.4.32",
     "tailwindcss": "^3.3.7"
+  },
+  "rules": {
+    "jsx-a11y/anchor-is-valid": "warn"
   }
 }
+
+
+
