@@ -23,7 +23,7 @@ function Navbar() {
             aria-label="Toggle navigation"
           >
 
-            
+
             <span className="navbar-toggler-icon"></span>
           </button>
           <div className="collapse navbar-collapse justify-content-center" id="navbarNav">
@@ -51,7 +51,7 @@ function Navbar() {
             </ul>
           </div>
           {/* Social Media Links */}
-          <div className="ml-auto ">
+          {/* <div className="ml-auto ">
             <ul className="navbar-nav">
               <li className="nav-item">
                 <a className="nav-link" href="#">
@@ -65,6 +65,26 @@ function Navbar() {
               </li>
               <li className="nav-item">
                 <a className="nav-link" href="#">
+                  <i className="fab fa-instagram"></i>
+                </a>
+              </li>
+            </ul>
+          </div> */}
+          {/* Social Media Links */}
+          <div className="ml-auto ">
+            <ul className="navbar-nav">
+              <li className="nav-item">
+                <a className="nav-link" href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer">
+                  <i className="fab fa-facebook-f"></i>
+                </a>
+              </li>
+              <li className="nav-item">
+                <a className="nav-link" href="https://twitter.com/" target="_blank" rel="noopener noreferrer">
+                  <i className="fab fa-twitter"></i>
+                </a>
+              </li>
+              <li className="nav-item">
+                <a className="nav-link" href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer">
                   <i className="fab fa-instagram"></i>
                 </a>
               </li>
