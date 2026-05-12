@@ -1,72 +1,52 @@
-import { useSpring, animated } from 'react-spring';
 import React from 'react';
+import { Reveal, RevealGroup, RevealItem, scaleIn } from './motion';
+
+const stack = [
+  { name: 'React', icon: 'fa-react', color: 'text-sky-500', blurb: 'Modern, component-driven UIs' },
+  { name: 'Node.js', icon: 'fa-node-js', color: 'text-green-600', blurb: 'High-throughput backend services' },
+  { name: 'Python', icon: 'fa-python', color: 'text-yellow-600', blurb: 'Data, ML, and automation' },
+  { name: 'AWS', icon: 'fa-aws', color: 'text-orange-500', blurb: 'Reliable cloud infrastructure' },
+  { name: 'Docker', icon: 'fa-docker', color: 'text-sky-600', blurb: 'Containerized deployments' },
+  { name: 'GitHub', icon: 'fa-github', color: 'text-ink-900', blurb: 'Source control & CI/CD' },
+  { name: 'Figma', icon: 'fa-figma', color: 'text-pink-500', blurb: 'Design systems & prototyping' },
+  { name: 'Android', icon: 'fa-android', color: 'text-green-500', blurb: 'Native mobile experiences' },
+];
 
 const Techstack = () => {
-  const cardAnimation = useSpring({
-    opacity: 1,
-    from: { opacity: 0 },
-    config: { duration: 1000 },
-  });
-
   return (
-    <>
-      <section className="bg-gray-100 py-16">
-        <div className="container mx-auto text-center max-w-screen-md">
-          <h2 className="text-4xl font-bold mb-8">Technologies We Use</h2>
+    <section className="section-y bg-gradient-to-b from-white to-brand-50/50">
+      <div className="container-page">
+        <Reveal className="text-center max-w-2xl mx-auto">
+          <span className="eyebrow">Our stack</span>
+          <h2 className="mt-3 text-3xl sm:text-4xl font-extrabold">
+            Tools and platforms we build with
+          </h2>
+          <p className="mt-4 text-ink-600 text-lg">
+            We use battle-tested, industry-standard technologies — chosen for performance,
+            security, and long-term maintainability.
+          </p>
+        </Reveal>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-4">
-            {/* Technology 1 */}
-            <animated.div style={cardAnimation}>
-              <div className="bg-white p-4 rounded-lg shadow-md">
-                <i className="fab fa-react text-3xl mb-2"></i>
-                <h3 className="text-lg font-bold mb-1">React.js</h3>
-                <p className="text-sm text-gray-700">Building interactive user interfaces with React.js.</p>
+        <RevealGroup
+          stagger={0.05}
+          className="mt-14 grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4 sm:gap-6"
+        >
+          {stack.map((t) => (
+            <RevealItem
+              variant={scaleIn}
+              key={t.name}
+              className="group gt-card p-6 text-center hover:-translate-y-1 hover:shadow-ring transition duration-300"
+            >
+              <div className="mx-auto inline-flex h-14 w-14 items-center justify-center rounded-2xl bg-ink-700/5 group-hover:bg-white ring-1 ring-ink-700/5 transition">
+                <i className={`fab ${t.icon} text-3xl ${t.color}`} />
               </div>
-            </animated.div>
-
-            
-
-            {/* Repeat the same structure for other technologies */}
-            {/* Technology 2 */}
-            <animated.div style={cardAnimation}>
-              <div className="bg-white p-4 rounded-lg shadow-md">
-                <i className="fab fa-node-js text-3xl mb-2"></i>
-                <h3 className="text-lg font-bold mb-1">Node.js</h3>
-                <p className="text-sm text-gray-700">Powering server-side applications with the efficiency of Node.js.</p>
-              </div>
-            </animated.div>
-
-            {/* Technology 3 */}
-            <animated.div style={cardAnimation}>
-              <div className="bg-white p-4 rounded-lg shadow-md">
-                <i className="fab fa-envira text-3xl mb-2"></i>
-                <h3 className="text-lg font-bold mb-1">MongoDB</h3>
-                <p className="text-sm text-gray-700">Storing and managing data seamlessly with MongoDB.</p>
-              </div>
-            </animated.div>
-
-            <animated.div style={cardAnimation}>
-              <div className="bg-white p-4 rounded-lg shadow-md">
-                <i className="fab fa-envira text-3xl mb-2"></i>
-                <h3 className="text-lg font-bold mb-1">MongoDB</h3>
-                <p className="text-sm text-gray-700">Storing and managing data seamlessly with MongoDB.</p>
-              </div>
-            </animated.div>
-
-            <animated.div style={cardAnimation}>
-              <div className="bg-white p-4 rounded-lg shadow-md">
-                <i className="fab fa-envira text-3xl mb-2"></i>
-                <h3 className="text-lg font-bold mb-1">MongoDB</h3>
-                <p className="text-sm text-gray-700">Storing and managing data seamlessly with MongoDB.</p>
-              </div>
-            </animated.div>
-
-            {/* Repeat the same structure for other technologies */}
-            {/* ... */}
-          </div>
-        </div>
-      </section>
-    </>
+              <h3 className="mt-4 text-base font-bold">{t.name}</h3>
+              <p className="mt-1 text-xs text-ink-600">{t.blurb}</p>
+            </RevealItem>
+          ))}
+        </RevealGroup>
+      </div>
+    </section>
   );
 };
 

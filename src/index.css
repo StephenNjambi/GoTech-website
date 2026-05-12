@@ -1,4 +1,59 @@
-*{
-  margin: 0;
-  padding: 0;
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    @apply font-sans text-ink-700 antialiased bg-white;
+  }
+  h1, h2, h3, h4 {
+    @apply font-display tracking-tight text-ink-900;
+  }
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+  a:hover {
+    text-decoration: none;
+  }
+}
+
+@layer components {
+  .container-page {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+  .gt-btn {
+    @apply inline-flex items-center justify-center gap-2 rounded-full px-6 py-3 text-sm font-semibold transition focus:outline-none focus:ring-2 focus:ring-offset-2 no-underline;
+  }
+  .gt-btn-primary {
+    @apply gt-btn bg-brand-600 text-white hover:bg-brand-700 hover:text-white focus:ring-brand-500 shadow-soft;
+  }
+  .gt-btn-secondary {
+    @apply gt-btn bg-white text-ink-900 hover:bg-ink-700/5 hover:text-ink-900 ring-1 ring-ink-700/10 focus:ring-ink-700/20;
+  }
+  .gt-btn-ghost-light {
+    @apply gt-btn bg-white/10 text-white hover:bg-white/20 hover:text-white ring-1 ring-white/20 backdrop-blur;
+  }
+  .eyebrow {
+    @apply inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.18em] text-brand-600;
+  }
+  .section-y {
+    @apply py-20 sm:py-24;
+  }
+  .gt-card {
+    @apply rounded-2xl bg-white ring-1 ring-ink-700/10 shadow-soft;
+  }
+}
+
+/* Reset Bootstrap link/anchor underline styles inside our buttons */
+a.gt-btn,
+a.gt-btn-primary,
+a.gt-btn-secondary,
+a.gt-btn-ghost-light {
+  text-decoration: none;
 }

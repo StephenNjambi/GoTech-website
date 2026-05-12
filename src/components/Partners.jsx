@@ -1,48 +1,42 @@
 import React from 'react';
+import { Reveal, RevealGroup, RevealItem, fadeIn } from './motion';
+
+const partners = [
+  { name: 'Vercel', icon: 'fa-vercel' },
+  { name: 'AWS', icon: 'fa-aws' },
+  { name: 'Google', icon: 'fa-google' },
+  { name: 'Microsoft', icon: 'fa-microsoft' },
+  { name: 'GitHub', icon: 'fa-github' },
+  { name: 'Stripe', icon: 'fa-stripe' },
+];
 
 const Partners = () => {
   return (
-    <>
-      <section className="bg-white py-16">
-        <div className="container mx-auto text-center">
-          <h2 className="text-4xl font-bold mb-8">Our Partners</h2>
-
-          <div className="flex flex-wrap justify-center items-center">
-            {/* Partner 1 */}
-            <div className="partner-item mx-4 mb-8">
-              <img
-                src="https://placehold.it/150x80" // Replace with the actual logo or image of the partner
-                alt="Partner Logo 1"
-                className="mx-auto"
-              />
-              <p className="text-gray-700 mt-4">Leading provider of innovative solutions</p>
-            </div>
-
-            {/* Partner 2 */}
-            <div className="partner-item mx-4 mb-8">
-              <img
-                src="https://placehold.it/150x80" // Replace with the actual logo or image of the partner
-                alt="Partner Logo 2"
-                className="mx-auto"
-              />
-              <p className="text-gray-700 mt-4">Strategic collaboration for business success</p>
-            </div>
-
-            {/* Partner 3 */}
-            <div className="partner-item mx-4 mb-8">
-              <img
-                src="https://placehold.it/150x80" // Replace with the actual logo or image of the partner
-                alt="Partner Logo 3"
-                className="mx-auto"
-              />
-              <p className="text-gray-700 mt-4">Innovative solutions for a competitive edge</p>
-            </div>
-
-            {/* Add more partners as needed */}
-          </div>
-        </div>
-      </section>
-    </>
+    <section className="py-14 bg-white border-y border-ink-700/5">
+      <div className="container-page">
+        <Reveal as="p" className="text-center text-xs font-semibold uppercase tracking-[0.2em] text-ink-600">
+          Trusted by teams using
+        </Reveal>
+        <RevealGroup
+          stagger={0.06}
+          className="mt-8 grid grid-cols-3 sm:grid-cols-6 gap-6 items-center justify-items-center"
+        >
+          {partners.map((p) => (
+            <RevealItem
+              variant={fadeIn}
+              key={p.name}
+              className="flex items-center gap-2 text-ink-600 hover:text-ink-900 transition opacity-80 hover:opacity-100"
+              title={p.name}
+            >
+              <i className={`fab ${p.icon} text-3xl`} />
+              <span className="hidden sm:inline font-display font-semibold tracking-tight">
+                {p.name}
+              </span>
+            </RevealItem>
+          ))}
+        </RevealGroup>
+      </div>
+    </section>
   );
 };
 
