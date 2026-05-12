@@ -107,7 +107,7 @@ const OpenSource = () => {
           ))}
         </RevealGroup>
 
-        <Reveal className="mt-12 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 rounded-2xl bg-brand-50/70 ring-1 ring-brand-100 p-6 sm:p-8">
+        <Reveal className="mt-10 sm:mt-12 flex flex-col md:flex-row items-start md:items-center justify-between gap-5 rounded-2xl bg-brand-50/70 ring-1 ring-brand-100 p-5 sm:p-8">
           <div className="max-w-2xl">
             <h3 className="text-lg font-bold text-ink-900">
               Don't see what you need? We've deployed dozens of others.
@@ -117,7 +117,7 @@ const OpenSource = () => {
               if it's open-source and proven, we'll make it work for you.
             </p>
           </div>
-          <Link to="/Contact" className="gt-btn-primary shrink-0">
+          <Link to="/Contact" className="gt-btn-primary shrink-0 w-full md:w-auto justify-center">
             Discuss your stack
             <i className="fa-solid fa-arrow-right text-xs" />
           </Link>

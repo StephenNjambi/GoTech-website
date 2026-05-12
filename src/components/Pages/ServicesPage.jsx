@@ -128,7 +128,7 @@ const ServicesPage = () => {
   return (
     <>
       {/* Header */}
-      <section className="relative isolate overflow-hidden bg-hero-gradient text-white py-20 sm:py-28">
+      <section className="relative isolate overflow-hidden bg-hero-gradient text-white py-16 sm:py-24 lg:py-28">
         <div
           className="absolute inset-0 -z-10 opacity-[0.08] bg-grid-pattern"
           style={{ backgroundSize: '40px 40px' }}
@@ -143,7 +143,7 @@ const ServicesPage = () => {
             <span className="inline-block h-1.5 w-1.5 rounded-full bg-brand-400" />
             Our services
           </span>
-          <h1 className="mt-4 text-4xl sm:text-5xl lg:text-6xl font-extrabold leading-[1.05] text-white">
+          <h1 className="mt-4 text-3xl sm:text-5xl lg:text-6xl font-extrabold leading-tight sm:leading-[1.05] text-white">
             Everything you need to{' '}
             <span className="bg-gradient-to-r from-brand-300 via-white to-brand-200 bg-clip-text text-transparent">
               design, build, and scale
@@ -222,7 +222,7 @@ const ServicesPage = () => {
           <RevealGroup
             as="ol"
             stagger={0.1}
-            className="mt-14 grid sm:grid-cols-2 lg:grid-cols-5 gap-5"
+            className="mt-14 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-5"
           >
             {processSteps.map((step, i) => (
               <RevealItem
@@ -262,12 +262,12 @@ const ServicesPage = () => {
             </p>
           </Reveal>
 
-          <RevealGroup className="mt-12 grid md:grid-cols-3 gap-6">
+          <RevealGroup className="mt-12 grid grid-cols-1 md:grid-cols-3 gap-6">
             {engagements.map((e) => (
               <RevealItem
                 as="article"
                 key={e.name}
-                className={`relative gt-card p-8 flex flex-col hover:-translate-y-1 transition duration-300 ${
+                className={`relative gt-card p-6 sm:p-8 flex flex-col hover:-translate-y-1 transition duration-300 ${
                   e.featured ? 'ring-2 ring-brand-500 shadow-ring' : 'hover:shadow-ring'
                 }`}
               >

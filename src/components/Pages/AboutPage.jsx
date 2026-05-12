@@ -86,7 +86,7 @@ const AboutPage = () => {
   return (
     <>
       {/* Header */}
-      <section className="relative isolate overflow-hidden bg-hero-gradient text-white py-20 sm:py-28">
+      <section className="relative isolate overflow-hidden bg-hero-gradient text-white py-16 sm:py-24 lg:py-28">
         <div
           className="absolute inset-0 -z-10 opacity-[0.08] bg-grid-pattern"
           style={{ backgroundSize: '40px 40px' }}
@@ -101,7 +101,7 @@ const AboutPage = () => {
             <span className="inline-block h-1.5 w-1.5 rounded-full bg-brand-400" />
             About GoTech
           </span>
-          <h1 className="mt-4 text-4xl sm:text-5xl lg:text-6xl font-extrabold leading-[1.05] text-white">
+          <h1 className="mt-4 text-3xl sm:text-5xl lg:text-6xl font-extrabold leading-tight sm:leading-[1.05] text-white">
             We build software that{' '}
             <span className="bg-gradient-to-r from-brand-300 via-white to-brand-200 bg-clip-text text-transparent">
               moves your business forward
@@ -150,7 +150,7 @@ const AboutPage = () => {
               <img
                 src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?q=80&w=1600&auto=format&fit=crop"
                 alt="GoTech team working together at a whiteboard"
-                className="w-full h-[420px] object-cover"
+                className="w-full h-[280px] sm:h-[360px] lg:h-[420px] object-cover"
                 loading="lazy"
               />
             </div>

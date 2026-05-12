@@ -35,9 +35,9 @@ function Footer() {
   const year = new Date().getFullYear();
   return (
     <footer className="bg-ink-900 text-white">
-      <div className="container-page py-16">
-        <div className="grid lg:grid-cols-5 gap-10">
-          <div className="lg:col-span-2">
+      <div className="container-page py-12 sm:py-16">
+        <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-5 gap-8 sm:gap-10">
+          <div className="col-span-2 lg:col-span-2">
             <Link to="/" className="flex items-center gap-2">
               <span className="inline-flex h-9 w-9 items-center justify-center rounded-xl bg-gradient-to-br from-brand-500 to-brand-700 text-white font-bold shadow-soft">
                 G

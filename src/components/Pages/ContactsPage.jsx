@@ -93,7 +93,7 @@ const ContactsPage = () => {
   return (
     <>
       {/* Header */}
-      <section className="relative isolate overflow-hidden bg-hero-gradient text-white py-20 sm:py-24">
+      <section className="relative isolate overflow-hidden bg-hero-gradient text-white py-16 sm:py-24">
         <div
           className="absolute inset-0 -z-10 opacity-[0.08] bg-grid-pattern"
           style={{ backgroundSize: '40px 40px' }}
@@ -108,7 +108,7 @@ const ContactsPage = () => {
             <span className="inline-block h-1.5 w-1.5 rounded-full bg-brand-400" />
             Contact us
           </span>
-          <h1 className="mt-4 text-4xl sm:text-5xl lg:text-6xl font-extrabold leading-[1.05] text-white">
+          <h1 className="mt-4 text-3xl sm:text-5xl lg:text-6xl font-extrabold leading-tight sm:leading-[1.05] text-white">
             Let's build something{' '}
             <span className="bg-gradient-to-r from-brand-300 via-white to-brand-200 bg-clip-text text-transparent">
               great together
@@ -221,10 +221,13 @@ const ContactsPage = () => {
                   />
                 </div>
                 <div className="sm:col-span-2 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3">
-                  <p className="text-xs text-ink-600">
+                  <p className="text-xs text-ink-600 order-2 sm:order-1">
                     By submitting, you agree to our privacy practices. We never share your data.
                   </p>
-                  <button type="submit" className="gt-btn-primary sm:self-end">
+                  <button
+                    type="submit"
+                    className="gt-btn-primary w-full sm:w-auto order-1 sm:order-2"
+                  >
                     Send message <i className="fa-solid fa-paper-plane text-xs" />
                   </button>
                 </div>
@@ -244,7 +247,7 @@ const ContactsPage = () => {
                   </span>
                   <div>
                     <p className="text-ink-600">Email</p>
-                    <a href="mailto:hello@gotech.example" className="font-semibold text-ink-900 hover:text-brand-700">
+                    <a href="mailto:hello@gotech.example" className="font-semibold text-ink-900 hover:text-brand-700 break-all">
                       hello@gotech.example
                     </a>
                   </div>
@@ -346,7 +349,7 @@ const ContactsPage = () => {
                 <p className="mt-2 text-ink-600 text-sm leading-relaxed">{d.description}</p>
                 <a
                   href={`mailto:${d.email}`}
-                  className="mt-5 inline-flex items-center gap-2 text-sm font-semibold text-brand-700 hover:text-brand-800"
+                  className="mt-5 inline-flex items-center gap-2 text-sm font-semibold text-brand-700 hover:text-brand-800 break-all"
                 >
                   {d.email} <i className="fa-solid fa-arrow-right text-[10px]" />
                 </a>
@@ -394,7 +397,7 @@ const ContactsPage = () => {
             </Reveal>
 
             <Reveal className="lg:col-span-3">
-              <div className="rounded-3xl overflow-hidden ring-1 ring-ink-700/10 shadow-soft h-[460px]">
+              <div className="rounded-3xl overflow-hidden ring-1 ring-ink-700/10 shadow-soft h-[320px] sm:h-[400px] lg:h-[460px]">
                 <iframe
                   title="GoTech office location"
                   src="https://www.openstreetmap.org/export/embed.html?bbox=36.798%2C-1.276%2C36.830%2C-1.255&layer=mapnik"

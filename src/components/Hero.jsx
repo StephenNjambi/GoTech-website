@@ -29,7 +29,7 @@ const Hero = () => {
       };
 
   return (
-    <section className="relative isolate overflow-hidden bg-hero-gradient text-white pt-28 sm:pt-32 pb-20 sm:pb-28">
+    <section className="relative isolate overflow-hidden bg-hero-gradient text-white pt-24 sm:pt-32 pb-16 sm:pb-24 lg:pb-28">
       <div
         className="absolute inset-0 -z-10 opacity-[0.08] bg-grid-pattern"
         style={{ backgroundSize: '40px 40px' }}
@@ -69,14 +69,14 @@ const Hero = () => {
           </motion.span>
           <motion.h1
             variants={item}
-            className="mt-4 text-4xl sm:text-5xl lg:text-6xl font-extrabold leading-[1.05] text-white"
+            className="mt-4 text-3xl sm:text-5xl lg:text-6xl font-extrabold leading-tight sm:leading-[1.05] text-white"
           >
             Build a smarter business with{' '}
             <span className="bg-gradient-to-r from-brand-300 via-white to-brand-200 bg-clip-text text-transparent">
               modern technology
             </span>
           </motion.h1>
-          <motion.p variants={item} className="mt-6 text-lg text-white/75 max-w-xl">
+          <motion.p variants={item} className="mt-5 text-base sm:text-lg text-white/75 max-w-xl">
             GoTech partners with ambitious teams to design, build, and scale software,
             websites, and cloud platforms that move metrics — not just ship features.
           </motion.p>
@@ -95,23 +95,23 @@ const Hero = () => {
 
           <motion.dl
             variants={item}
-            className="mt-12 grid grid-cols-3 gap-6 max-w-md"
+            className="mt-10 sm:mt-12 grid grid-cols-3 gap-4 sm:gap-6 max-w-md"
           >
             <div>
-              <dt className="text-xs uppercase tracking-widest text-white/60">Projects</dt>
-              <dd className="mt-1 text-2xl font-bold text-white">
+              <dt className="text-[10px] sm:text-xs uppercase tracking-widest text-white/60">Projects</dt>
+              <dd className="mt-1 text-xl sm:text-2xl font-bold text-white">
                 <Counter value={120} suffix="+" />
               </dd>
             </div>
             <div>
-              <dt className="text-xs uppercase tracking-widest text-white/60">Countries</dt>
-              <dd className="mt-1 text-2xl font-bold text-white">
+              <dt className="text-[10px] sm:text-xs uppercase tracking-widest text-white/60">Countries</dt>
+              <dd className="mt-1 text-xl sm:text-2xl font-bold text-white">
                 <Counter value={18} />
               </dd>
             </div>
             <div>
-              <dt className="text-xs uppercase tracking-widest text-white/60">Retention</dt>
-              <dd className="mt-1 text-2xl font-bold text-white">
+              <dt className="text-[10px] sm:text-xs uppercase tracking-widest text-white/60">Retention</dt>
+              <dd className="mt-1 text-xl sm:text-2xl font-bold text-white">
                 <Counter value={97} suffix="%" />
               </dd>
             </div>
@@ -128,7 +128,7 @@ const Hero = () => {
             <img
               src="https://images.unsplash.com/photo-1551434678-e076c223a692?q=80&w=1600&auto=format&fit=crop"
               alt="A team collaborating around laptops on a modern product"
-              className="w-full h-[420px] object-cover"
+              className="w-full h-[260px] sm:h-[360px] lg:h-[420px] object-cover"
               loading="eager"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-ink-900/70 via-transparent to-transparent" />
